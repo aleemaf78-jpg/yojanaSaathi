@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#176b43">
+  <title>YojanaSaathi | Government Scheme Assistant</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="welcome-screen" id="welcomeScreen">
+    <div class="welcome-card">
+      <img class="welcome-logo" id="welcomeLogo" src="assets/yojana-logo.svg" alt="YojanaSaathi logo">
+      <div id="languageStep" class="welcome-step" hidden>
+        <span class="eyebrow">WELCOME TO</span><h1>Yojana<span>Saathi</span></h1>
+        <p id="languagePrompt">Please choose your preferred language.</p>
+        <label class="welcome-label" for="welcomeLanguage">Choose your language</label>
+        <select id="welcomeLanguage" class="welcome-language"></select>
+        <button id="languageContinue" class="primary-btn welcome-continue">Continue →</button>
+      </div>
+      <div id="modeStep" class="welcome-step" hidden>
+        <span class="eyebrow">YOUR DIGITAL SCHEME COMPANION</span>
+        <h1>Yojana<span>Saathi</span></h1>
+        <p id="welcomeGreeting">Welcome to YojanaSaathi! How may I help you?</p>
+        <div class="welcome-actions"><button id="welcomeVoice" class="primary-btn">🎙️ Talk to me</button><button id="welcomeType" class="secondary-btn">⌨️ I prefer typing</button></div>
+        <small id="welcomeHint">You can switch between voice and typing anytime.</small>
+      </div>
+    </div>
+  </div>
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="#home" aria-label="YojanaSaathi home"><img class="brand-mark" src="assets/yojana-logo.svg" alt=""><span>Yojana<span class="brand-accent">Saathi</span><small>SCHEME ASSISTANT</small></span></a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+      <div class="nav-links" id="navLinks"><a href="#home">Home</a><a href="#schemes">Explore schemes</a><a href="#assistant">AI assistant</a><a href="#about">About</a></div>
+      <label class="language-control" for="siteLanguageSelect"><span aria-hidden="true">◎</span><span class="language-control-label">Language</span><select id="siteLanguageSelect" class="site-language" aria-label="Choose website language"></select></label>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy"><span class="eyebrow"><span class="live-dot"></span> YOUR GOVERNMENT SCHEME COMPANION</span>
+        <h1>Government benefits,<br><span>within your reach.</span></h1>
+        <p>Find schemes, understand eligibility and get simple guidance in the language you are comfortable with.</p>
+        <div class="hero-actions"><a class="primary-btn" href="#schemes">Explore schemes <span>→</span></a><a class="secondary-btn" href="#assistant">Talk to YojanaSaathi</a></div>
+        <div class="trust-line"><span>✓ Simple explanations</span><span>✓ Hindi, English & Urdu</span><span>✓ Voice enabled</span></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration showing government scheme support categories">
+        <div class="art-glow"></div>
+        <div class="support-board">
+          <div class="board-top"><span class="board-kicker">YOJANASAATHI GUIDE</span><span class="board-live"><i></i> READY TO HELP</span></div>
+          <h3>Support that<br><em>reaches everyone.</em></h3>
+          <p>Explore government benefits in one simple place.</p>
+          <div class="support-items">
+            <div class="support-item"><span class="support-icon farm-icon"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 33V16M20 23C10 23 8 16 9 9c8 0 13 4 13 11M20 19c1-8 7-12 14-11 1 8-4 13-12 14"/><path d="M7 34h26"/></svg></span><span><b>Farmers</b><small>Crop & income support</small></span></div>
+            <div class="support-item"><span class="support-icon health-icon"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="M20 34S6 25 6 15a8 8 0 0 1 14-5 8 8 0 0 1 14 5c0 10-14 19-14 19Z"/><path d="M20 14v12M14 20h12"/></svg></span><span><b>Families</b><small>Health & housing help</small></span></div>
+            <div class="support-item"><span class="support-icon learn-icon"><svg viewBox="0 0 40 40" aria-hidden="true"><path d="m5 15 15-8 15 8-15 8-15-8Z"/><path d="M11 19v9c5 5 13 5 18 0v-9M35 16v11"/></svg></span><span><b>Students</b><small>Education & scholarships</small></span></div>
+          </div>
+          <div class="board-footer"><span class="footer-check">✓</span> Simple guidance in your language</div>
+        </div>
+        <div class="floating-language"><span>अ</span><span> A </span><span>தமிழ்</span><small>Many languages. One Saathi.</small></div>
+      </div>
+    </section>
+
+    <section class="features"><div><span class="feature-icon">🔎</span><b>Discover</b><small>Explore useful schemes</small></div><div><span class="feature-icon">📋</span><b>Understand</b><small>Know benefits & documents</small></div><div><span class="feature-icon">🎙️</span><b>Ask by voice</b><small>Hindi, English & Urdu voice support</small></div></section>
+
+    <section class="profile-section section" id="quick-profile">
+      <div class="profile-card">
+        <div class="section-heading"><span class="eyebrow">LET’S FIND THE RIGHT SUPPORT</span><h2>Tell us a little about yourself</h2><p>Share a few basic details and your purpose. YojanaSaathi will show schemes that may be relevant to you.</p></div>
+        <form id="profileForm" class="profile-form">
+          <label>Age <input id="profileAge" type="number" min="1" max="120" placeholder="Your age"></label>
+          <label>State <input id="profileState" type="text" placeholder="e.g. Uttar Pradesh"></label>
+          <label>Monthly family income (₹) <input id="profileIncome" type="number" min="0" placeholder="Approximate income"></label>
+          <label>Occupation <select id="profileOccupation"><option value="">Select occupation</option><option>Farmer</option><option>Student</option><option>Self-employed / Business</option><option>Worker</option><option>Homemaker</option><option>Other</option></select></label>
+          <label class="purpose-field">What do you need help with? <select id="profilePurpose" required><option value="">Choose your purpose</option><option value="farming">Farming / Agriculture</option><option value="scholarship">Scholarship / Education</option><option value="health">Health / Medical help</option><option value="housing">Housing / Home</option><option value="business">Business / Loan / Employment</option><option value="pension">Pension / Social security</option><option value="women">Women / Household support</option><option value="ration">Ration / Food security</option><option value="water">Water / Sanitation</option><option value="all">Show all schemes</option></select></label>
+          <button class="primary-btn" type="submit">Find schemes for me →</button>
+        </form>
+        <p class="profile-note">Your details are used only to guide scheme discovery in this browser session. This is not an official eligibility decision.</p>
+      </div>
+    </section>
+
+    <section class="section schemes-section" id="schemes"><div class="section-heading"><span class="eyebrow">SCHEME DIRECTORY</span><h2>Find the support you need</h2><p>Search by scheme name or the benefit you are looking for.</p></div>
+      <div class="search-box"><span>⌕</span><input type="search" id="searchInput" placeholder="Try ‘farmer’, ‘health’, ‘housing’..."><button id="searchButton">Search</button></div>
+      <div id="schemeList" class="scheme-grid"><p class="loading-text">Loading schemes...</p></div>
+    </section>
+
+    <section class="assistant-section section" id="assistant"><div class="section-heading"><span class="eyebrow">YOJANASAATHI ASSISTANT</span><h2>How can I help you today?</h2><p>Type your question or use your microphone to talk to the assistant.</p></div>
+      <div class="assistant-layout">
+        <aside class="assistant-intro"><img class="assistant-logo" src="assets/yojana-logo.svg" alt="YojanaSaathi logo"><h3>Your friendly scheme guide</h3><p>Ask about benefits, eligibility, documents or how to apply. Choose your preferred language below.</p><label for="languageSelect">Assistant language</label><select id="languageSelect"></select><div class="privacy-note">🔒 Microphone is used only after you tap the voice button. Speech recognition depends on your browser.</div></aside>
+        <div class="chat-container"><div class="chat-header"><img class="chat-avatar" src="assets/yojana-logo.svg" alt=""><div class="chat-title"><b>YojanaSaathi</b><small><span class="live-dot"></span> Ready to help</small></div><button class="sound-toggle" id="soundToggle" aria-pressed="true" title="Toggle spoken replies">🔊</button></div>
+          <div id="chatMessages" class="chat-messages" aria-live="polite"><div class="message bot-message">Namaste! Welcome to YojanaSaathi. I can help you find information about government schemes. You can type your question or tap the microphone to speak.</div></div>
+          <div class="voice-status" id="voiceStatus" aria-live="polite"><span class="status-pulse"></span><span id="statusText">You can start a voice conversation anytime.</span></div>
+          <div class="chat-input"><input type="text" id="userMessage" placeholder="Type your question here..." autocomplete="off"><button class="send-btn" id="sendButton" aria-label="Send message">➤</button></div>
+          <div class="chat-tools"><button class="mic-btn" id="micButton"><span>🎙️</span> <span id="micLabel">Start voice chat</span></button><button class="stop-btn" id="stopButton" disabled>Stop voice</button><span class="powered-note">Voice features work best in Chrome or Edge.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section section" id="about"><span class="eyebrow">ABOUT US</span><h2>Making information easier for everyone.</h2><p>YojanaSaathi is a student project designed to make government scheme information easier to discover and understand, especially for farmers and rural citizens. It provides general guidance; final eligibility and application decisions belong to the relevant government department.</p></section>
+  </main>
+  <footer><a class="footer-brand" href="#home"><img src="assets/yojana-logo.svg" alt=""> YojanaSaathi</a><p>Making government scheme information accessible to everyone.</p><small>© 2026 YojanaSaathi · Verify current rules on the official scheme portal.</small></footer>
+  <script src="script.js"></script>
+</body>
+</html>

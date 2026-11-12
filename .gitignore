@@ -1,0 +1,13 @@
+
+venv/
+.venv/
+__pycache__/
+*.pyc
+backend/yojana.db
+.env
+.vscode/
+.DS_Store
+build/
+.env
+dist/
+node_modules/
